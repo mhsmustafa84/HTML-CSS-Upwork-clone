@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <!-- style for navbar and footer as freelancer login -->
+    <link rel="stylesheet" href="submit-proposal.css">
+
+    <!-- font awesome -->
+    <script defer src="https://use.fontawesome.com/releases/v5.15.2/js/all.js" integrity="sha384-vuFJ2JiSdUpXLKGK+tDteQZBqNlMwAjhZ3TvPaDfN9QmbPb7Q8qUpbSNapQev3YF" crossorigin="anonymous">
+    </script>
+    <script src="https://kit.fontawesome.com/9e1557e709.js" crossorigin="anonymous"></script>
+
+    <!-- change the title to your page title -->
+    <title>Submit Proposal</title>
+
+</head>
+
+<body>
+
+    <!-- start navbar -->
+    <header class="nav-bg-cn py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <!-- collapse search icon button -->
+            <button id="search-btn-res-id" class="btn d-none">
+                <i class="fa fa-search text-white"></i>
+            </button>
+
+            <!-- upwork logo -->
+            <div class="d-flex">
+                <a href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102.4 30" width="106" height="30" role="img" aria-hidden="true" style="margin-top: 5px;">
+                        <path fill="#fff" d="M65.4 6.9c-4.5 0-8.1 3.6-8.1 8.1s3.6 8.1 8.1 8.1 8.1-3.6 8.1-8.1-3.6-8.1-8.1-8.1zm0 12.9c-2.6 0-4.8-2.1-4.8-4.8s2.1-4.8 4.8-4.8c2.6 0 4.8 2.1 4.8 4.7 0 2.7-2.1 4.9-4.8 4.9zM83.4 10.8c-2.3 0-4.2 1.9-4.2 4.2v7.7h-3.5V7.4h3.5v2.4c1-1.5 2.7-2.4 4.5-2.4h1.1v3.4h-1.4zM48.2 7.4L50.8 18l2.9-10.6h3.4l-4.4 15.3h-3.5L46.5 12l-2.7 10.7h-3.5L35.9 7.4h3.4L42.2 18l2.7-10.6zM95 14.4c2.6-1.4 4.1-4.1 4.1-7.1h-3.4c0 2.6-2.1 4.6-4.6 4.6h-.5V0h-3.5v22.7h3.5v-7.2h.4c.4 0 .8.2 1 .5l4.9 6.7h4.2L95 14.4z" class="logo-work"></path>
+                        <path fill="#6fda44" d="M27.6 6.9c-3.8 0-6.7 2.5-7.9 6.5-1.8-2.7-3.1-5.7-4-8.8h-4.1v10.6c0 2.1-1.7 3.8-3.8 3.8S4 17.3 4 15.2V4.7H0v10.6c0 4.3 3.5 7.9 7.9 7.9s7.9-3.5 7.9-7.9v-1.8c.8 1.7 1.8 3.3 2.9 4.8L16.2 30h4.2l1.8-8.5c1.6 1.1 3.5 1.7 5.5 1.7 4.5 0 8.1-3.6 8.1-8.1-.1-4.5-3.7-8.2-8.2-8.2zm0 12.2c-1.7-.1-3.3-.7-4.6-1.8l.3-1.6v-.1c.3-1.7 1.3-4.6 4.2-4.6 2.2-.1 4 1.7 4.1 3.9.1 2.2-1.7 4-3.9 4.1l-.1.1z">
+                        </path>
+                    </svg>
+                </a>
+            </div>
+
+            <!-- search form -->
+            <form id="search-form-id" class="d-flex ms-4">
+                <button class="btn position-relative search-btn-cn">
+                    <i class="fa fa-search text-white search-icon-cn"></i>
+                </button>
+                <div class="nav-item dropdown search-type-cn">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-sort-down text-white search-icon-cn"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item px-4" href="#">
+                            <div class="d-flex align-items-center">
+                                <span class="me-2 mb-3"><i class="fas fa-user fs-6"></i></span>
+                                <div class="acc-cn ms-2">
+                                    <p>Talent</p>
+                                    <p>Hire professionals and agencies</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item px-4" href="#">
+                            <div class="d-flex align-items-center">
+                                <span class="me-2 mb-3"><i class="fas fa-clipboard-list fs-6"></i></span>
+                                <div class="acc-cn ms-2">
+                                    <p>Projects <span id="search-type-projects-new" class="rounded-pill">NEW</span>
+                                    </p>
+                                    <p>Buy pre-defined projects</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item px-4" href="#">
+                            <div class="d-flex align-items-center">
+                                <span class="me-2 mb-3"><i class="fas fa-briefcase fs-6"></i></span>
+                                <div class="acc-cn ms-2">
+                                    <p>Jobs</p>
+                                    <p>Apply to jobs posted by clients</p>
+                                </div>
+                            </div>
+                        </a>
+                    </ul>
+                </div>
+                <input class="form-control ms-1 ps-5 py-1 border-0 text-white search-input-cn" type="search" placeholder="Search" aria-label="Search">
+            </form>
+
+            <!-- navigation menu -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-transparent py-0">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--  navigation menu large screen -->
+                <div class="navbar-expand" id="navbarNav-id">
+                    <ul class="navbar-nav">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Find Work
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <div class="nav-dd-cn"></div>
+                                <li><a class="dropdown-item" href="#">Find Work</a></li>
+                                <li><a class="dropdown-item" href="#">Saved Jobs</a></li>
+                                <li><a class="dropdown-item" href="#">Proposals</a></li>
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">My Stats</a></li>
+                                <li><a class="dropdown-item" href="#">Upwork Readiness Test</a></li>
+                                <li><a class="dropdown-item" href="#">My Project Dashboard</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                My Jobs
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <div class="nav-dd-cn"></div>
+                                <li><a class="dropdown-item" href="#">My Jobs</a></li>
+                                <li><a class="dropdown-item" href="#">All Contracts</a></li>
+                                <li><a class="dropdown-item" href="#">Work Diary</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Reports
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <div class="nav-dd-cn"></div>
+                                <li><a class="dropdown-item" href="#">Overview</a></li>
+                                <li><a class="dropdown-item" href="#">My Reports</a></li>
+                                <li><a class="dropdown-item" href="#">Lifetime Billings by Client</a></li>
+                                <li><a class="dropdown-item" href="#">Connects History</a></li>
+                                <li><a class="dropdown-item" href="#">Transaction History</a></li>
+                                <li><a class="dropdown-item" href="#">Certificate of Earnings</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item me-5">
+                            <a class="nav-link" href="#">Messages</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="fas fa-question fs-5"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="far fa-bell fs-5"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"><i class="far fa-paper-plane fs-5" style="transform: scaleX(-1);"></i></a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="40" height="40" role="img" style="margin-top: -10px;">
+                                    <path fill-rule="evenodd" fill="white" d="M7 12.6a5.6 5.6 0 0 1-4.64-2.47C2.94 8.78 4.49 7.88 7 7.88s4.06.9 4.64 2.25A5.6 5.6 0 0 1 7 12.6M7 1.45a2.76 2.76 0 1 1 0 5.53 2.76 2.76 0 0 1 0-5.53M7 0a7 7 0 1 0 .02 14.02A7 7 0 0 0 7 0">
+                                    </path>
+                                </svg>
+                            </a>
+                            <ul id="acc-id" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <div class="nav-dd-acc-cn"></div>
+                                <li class="px-4 py-3">
+                                    <div id="acc-btns-id" class="btn-group w-100" role="group" aria-label="Basic example">
+                                        <button type="button" class="btn">Online</button>
+                                        <span style="padding: 0 1px;"></span>
+                                        <button type="button" class="btn">Invisible</button>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item px-4" href="#">
+                                        <div class="d-flex align-items-center">
+                                            <span style="margin-left: -5px;"><i class="fa fa-user-circle fs-3"></i></span>
+                                            <div class="acc-cn ms-2">
+                                                <p>Name</p>
+                                                <p>Freelancer</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item px-4 mb-1" href="#">
+                                        <div class="d-flex align-items-center">
+                                            <span style="margin-left: -5px;"><i class="fa fa-user-circle fs-3"></i></span>
+                                            <div class="acc-cn ms-2">
+                                                <p>Name</p>
+                                                <p>Client</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item px-4" href="#">
+                                        <span><i class="fa fa-cog"></i></span>
+                                        <span class="ps-2">Settings</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item px-4" href="#">
+                                        <span><i class="fas fa-sign-out-alt"></i></span>
+                                        <span class="ps-2">Log Out</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!--  navigation menu collapse in small screens -->
+        <div class="container">
+            <div class="collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <form class="d-flex mt-1">
+                            <button class="btn position-relative search-btn-cn">
+                                <i class="fa fa-search text-white search-icon-cn"></i>
+                            </button>
+                            <div class="nav-item dropdown search-type-cn">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa fa-sort-down text-white search-icon-cn"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <a class="dropdown-item px-4" href="#">
+                                        <div class="d-flex align-items-center">
+                                            <span class="me-2 mb-3"><i class="fas fa-user fs-6"></i></span>
+                                            <div class="acc-cn ms-2">
+                                                <p>Talent</p>
+                                                <p>Hire professionals and agencies</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item px-4" href="#">
+                                        <div class="d-flex align-items-center">
+                                            <span class="me-2 mb-3"><i class="fas fa-clipboard-list fs-6"></i></span>
+                                            <div class="acc-cn ms-2">
+                                                <p>Projects <span id="search-type-projects-new" class="rounded-pill">NEW</span>
+                                                </p>
+                                                <p>Buy pre-defined projects</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <a class="dropdown-item px-4" href="#">
+                                        <div class="d-flex align-items-center">
+                                            <span class="me-2 mb-3"><i class="fas fa-briefcase fs-6"></i></span>
+                                            <div class="acc-cn ms-2">
+                                                <p>Jobs</p>
+                                                <p>Apply to jobs posted by clients</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </ul>
+                            </div>
+                            <input class="form-control ps-4 py-1 border-0 text-white search-input-cn" type="search" placeholder="Search" aria-label="Search">
+                        </form>
+                    </li>
+                    <li class="nav-item dropdown px-3">
+                        <a class="nav-link dropdown-toggle mt-4 pt-4 border-top-cn" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14" width="40" height="40" role="img" style="margin-top: -10px;">
+                                <path fill-rule="evenodd" fill="white" d="M7 12.6a5.6 5.6 0 0 1-4.64-2.47C2.94 8.78 4.49 7.88 7 7.88s4.06.9 4.64 2.25A5.6 5.6 0 0 1 7 12.6M7 1.45a2.76 2.76 0 1 1 0 5.53 2.76 2.76 0 0 1 0-5.53M7 0a7 7 0 1 0 .02 14.02A7 7 0 0 0 7 0">
+                                </path>
+                            </svg>
+                            Name
+                            <i class="fa fa-sort-down text-white float-end"></i>
+                        </a>
+                        <ul id="acc-id" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li class="px-4 py-3">
+                                <div id="acc-btns-id" class="btn-group w-100" role="group" aria-label="Basic example">
+                                    <button type="button" class="btn">Online</button>
+                                    <span style="padding: 0 1px;"></span>
+                                    <button type="button" class="btn">Invisible</button>
+                                </div>
+                            </li>
+                            <li>
+                                <a class="dropdown-item px-4" href="#">
+                                    <div class="d-flex align-items-center">
+                                        <span style="margin-left: -5px;"><i class="fa fa-user-circle fs-3"></i></span>
+                                        <div class="acc-cn ms-2">
+                                            <p>Name</p>
+                                            <p>Freelancer</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item px-4 mb-1" href="#">
+                                    <div class="d-flex align-items-center">
+                                        <span style="margin-left: -5px;"><i class="fa fa-user-circle fs-3"></i></span>
+                                        <div class="acc-cn ms-2">
+                                            <p>Name</p>
+                                            <p>Client</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown px-3">
+                        <a class="nav-link active dropdown-toggle mt-2 pt-3 border-top-cn" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Find Work
+                            <i class="fa fa-sort-down text-white float-end"></i>
+                        </a>
+                        <ul id="find-work-dd-id" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Find Work</a></li>
+                            <li><a class="dropdown-item" href="#">Saved Jobs</a></li>
+                            <li><a class="dropdown-item" href="#">Proposals</a></li>
+                            <li><a class="dropdown-item" href="#">Profile</a></li>
+                            <li><a class="dropdown-item" href="#">My Stats</a></li>
+                            <li><a class="dropdown-item" href="#">Upwork Readiness Test</a></li>
+                            <li><a class="dropdown-item" href="#">My Project Dashboard</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown px-3">
+                        <a class="nav-link dropdown-toggle mt-2 pt-3 border-top-cn" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            My Jobs
+                            <i class="fa fa-sort-down text-white float-end"></i>
+                        </a>
+                        <ul id="my-jobs-dd-id" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">My Jobs</a></li>
+                            <li><a class="dropdown-item" href="#">All Contracts</a></li>
+                            <li><a class="dropdown-item" href="#">Work Diary</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown px-3">
+                        <a class="nav-link dropdown-toggle mt-2 pt-3 border-top-cn" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Reports
+                            <i class="fa fa-sort-down text-white float-end"></i>
+                        </a>
+                        <ul id="reports-dd-id" class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="#">Overview</a></li>
+                            <li><a class="dropdown-item" href="#">My Reports</a></li>
+                            <li><a class="dropdown-item" href="#">Lifetime Billings by Client</a></li>
+                            <li><a class="dropdown-item" href="#">Connects History</a></li>
+                            <li><a class="dropdown-item" href="#">Transaction History</a></li>
+                            <li><a class="dropdown-item" href="#">Certificate of Earnings</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link mt-2 pt-3 border-top-cn" href="#">Messages</a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link mt-2 pt-3 border-top-cn" href="#">
+                            Help
+                            <i class="fas fa-question float-end"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link mt-2 pt-3 border-top-cn" href="#">
+                            Notification
+                            <i class="far fa-bell float-end"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item px-3">
+                        <a class="nav-link mt-2 pt-3 border-top-cn" href="#">
+                            Direct Contracts
+                            <i class="far fa-paper-plane float-end" style="transform: scaleX(-1);"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="dropdown-item mt-2 pt-3 border-top-cn" href="#">
+                            <span><i class="fa fa-cog"></i></span>
+                            <span class="ps-3">Settings</span>
+                        </a>
+                    </li>
+                    <li class="nav-item pb-2">
+                        <a class="dropdown-item mt-2 pt-3 border-top-cn" href="#">
+                            <span><i class="fas fa-sign-out-alt"></i></span>
+                            <span class="ps-3">Log Out</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- end navbar -->
+
+
+
+
+    <main>
+        <div class="container">
+            <h1 class="h3 py-4">Submit a proposal</h1>
+            <div class="row">
+                <div class="col">
+                    <div class="bg-white border rounded-bottom rounded-top">
+                        <h2 class="h4 border-bottom p-4">Proposal settings</h2>
+                        <div class="ps-4 pt-2">
+                            <p class="fw-bold">Propose with a Specialized profile</p>
+                        </div>
+                        <div class="btn-group w-50 ps-4 pb-2" role="group">
+                            <button id="btnGroupDrop1" type="button" class="btn dropdown-toggle shadow-none border text-start py-2" data-bs-toggle="dropdown" aria-expanded="false">
+                                General Profile
+                                <i class="fa fa-sort-down float-end"></i>
+                            </button>
+                            <ul class="dropdown-menu w-75" aria-labelledby="btnGroupDrop1">
+                                <li class="border-start border-4 border-success"><a class="dropdown-item" href="#">General Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Front-End Development</a></li>
+                                <li><a class="dropdown-item" href="#">CMS Development</a></li>
+                            </ul>
+                        </div>
+                        <div class="ps-4 py-2">
+                            <p>This proposal requires <strong>2 Connects </strong><span class="upw-c-cn"><i class="fas fa-question-circle"></i></span></p>
+                            <p>When you submit this proposal, you'll have<strong> 47 Connects </strong>remaining</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col">
+                    <div class="bg-white border rounded-bottom rounded-top">
+                        <h2 class="h4 border-bottom p-4">Job details</h2>
+                        <div class="ps-4 pt-2 d-flex">
+                            <div class="w-75">
+                                <p class="fw-bold">Develop an full Affiliate Website, ideally on WordPress, but not a must</p>
+                                <div class="mb-3">
+                                    <span class="bg-cat-cn py-1 px-2 me-3 rounded-pill">Full Stack Development</span>
+                                    <span>Posted Mar 19, 2021</span>
+                                </div>
+                                <div class="mb-3">
+                                    <p>Hi,
+                                        I need to hire a developer to build a casino affiliate website, ideally on Wordpress, but I am open to other solutions. What is important is that the back-office would be easy to use once finished and the website still very fast.</p>
+                                    <p>I identified an affiliate website as a model that... <a class="upw-c-cn" href="">more</a></p>
+                                    <a class="upw-c-cn" href="">View job posting</a>
+                                </div>
+                            </div>
+                            <div class="w-25 border-start m-3 ps-3">
+                                <div>
+                                    <span><i class="fas fa-head-side-virus"></i></span>
+                                    <span class="ps-2"><strong>Expert</strong></span>
+                                    <p class="ps-4">Experience Level</p>
+                                </div>
+                                <div>
+                                    <span><i class="far fa-clock"></i></span>
+                                    <span class="ps-2"><strong>Hours to be determined</strong></span>
+                                    <p class="ps-4">Hourly</p>
+                                </div>
+                                <div>
+                                    <span><i class="far fa-calendar-alt"></i></span>
+                                    <span class="ps-2"><strong>Less than a month</strong></span>
+                                    <p class="ps-4">Project Length</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mx-4 py-2 border-top pb-4">
+                            <p class="fw-bold">Skills and expertise</p>
+                            <span class="bg-cat-cn py-1 px-2 me-3 rounded-pill">Website Development</span>
+                            <span class="bg-cat-cn py-1 px-2 me-3 rounded-pill">WordPress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col">
+                    <div class="bg-white border rounded-bottom rounded-top">
+                        <h2 class="h4 border-bottom p-4">Job details</h2>
+                        <div class="ps-4 pt-2 d-flex">
+                            <div class="w-75">
+                                <p class="fw-bold">What is the rate you'd like to bid for this job?</p>
+                                <div class="my-4">
+                                    <span>Your profile rate: <strong>$20.00/hr</strong></span>
+                                </div>
+                                <div class="mb-3 d-flex justify-content-between">
+                                    <div>
+                                        <span><strong>Hourly Rate</strong></span>
+                                        <p>Total amount the client will see on your proposal</p>
+                                    </div>
+                                    <div class="me-5 mt-2 position-relative jd-inp-cn">
+                                        <div class="position-absolute"><i class="fas fa-dollar-sign"></i></div>
+                                        <input class="form-control text-end" type="text" value="20.00"><span class="position-absolute">/hr</span>
+                                    </div>
+                                </div>
+                                <div class="mb-3 d-flex justify-content-between border-top pt-3">
+                                    <div>
+                                        <p class="fw-bold">20% Upwork Service Fee <a class="upw-c-cn fw-normal" href="">Explain this</a></p>
+                                    </div>
+                                    <div class="me-5 mt-2">
+                                        <span style="position: relative; right: 115px;"><i class="fas fa-dollar-sign"></i></span>
+                                        <span class="text-end">-4.00</span>
+                                        <span style="position: relative; right: -30px;">/hr</span>
+                                    </div>
+                                </div>
+                                <div class="mb-3 d-flex justify-content-between border-top pt-3">
+                                    <div>
+                                        <span><strong>You'll Receive</strong></span>
+                                        <p>The estimated amount you'll receive after service fees <span class="upw-c-cn"><i class="fas fa-question-circle"></i></span></p>
+                                    </div>
+                                    <div class="me-5 mt-2 position-relative jd-inp-cn">
+                                        <div class="position-absolute"><i class="fas fa-dollar-sign"></i></div>
+                                        <input class="form-control text-end" type="text" value="16.00"><span class="position-absolute">/hr</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-25 m-3 ps-3">
+                                <svg width="120px" role="img" viewBox="0 0 145 130" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M72.5.5L16.8 17.6v61c0 5.6 1.4 11.2 4.2 16.1 6.1 10.8 20.3 27.5 51.5 34.8 31.2-7.2 45.4-24 51.5-34.8 2.8-4.9 4.2-10.5 4.2-16.1v-61L72.5.5z" fill="#6fda44"></path>
+                                    <path d="M128.2 78.6v-61L72.5.5v129c31.2-7.2 45.4-24 51.5-34.8 2.8-4.9 4.2-10.4 4.2-16.1z" fill="#34ba08"></path>
+                                    <path d="M75.9 75.9c2.8-.4 4.4-1.6 4.4-4 0-2-1.2-3.2-4.4-4.9l-6.1-1.6C61 62.9 56.5 59.7 56.5 52c0-6.9 5.3-11.3 13.3-12.5v-3.6h6.5v3.6c4.4.4 8.1 2 11.7 4.4l-4 7.3c-2.4-1.6-5.3-2.8-7.7-3.6 0 0-2-.8-6.1-.4-3.2.4-4.4 2-4.4 4s.8 3.2 4.4 4.4l6.1 1.6C86 59.6 90 63.7 90 70.5c0 6.9-5.3 11.7-13.3 12.5v4h-6.5v-4c-6.1-.4-11.3-2.4-15.4-5.7l4.9-7.3c3.2 2.4 6.5 4.4 10.1 5.3 4.1 1 6.1.6 6.1.6z" fill="#fff"></path>
+                                </svg>
+                                <p>Includes Upwork Hourly Protection<a class="upw-c-cn" href="">Learn more</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-5 pb-5">
+                <div class="col">
+                    <div class="bg-white border rounded-bottom rounded-top">
+                        <h2 class="h4 border-bottom p-4">Additional details</h2>
+                        <div class="ps-4 pt-2 pe-4">
+                            <p class="fw-bold">Cover Letter</p>
+                            <textarea class="form-control" rows="8"></textarea>
+                        </div>
+                        <div class="mx-4 mt-3 py-2 pb-4">
+                            <p class="fw-bold">Attachments</p>
+                            <div class="attachments-cn">
+                                <p class="py-2 text-center mt-2">drag or <a class="upw-c-cn" href="">upload</a> project files</p>
+                            </div>
+                            <p class="my-3">You may attach up to 10 files under the size of <strong>25MB</strong> each. Include work samples or other documents to support your application. Do not attach your résumé — your Upwork profile is automatically forwarded to the client with your proposal.</p>
+                        </div>
+                        <div class="border-top ps-4 py-4">
+                            <button class="btn shadow-none text-white" style="background-color: #37a000;">Submit Proposal</button>
+                            <button class="btn shadow-none upw-c-cn">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+    <!-- start footer -->
+    <footer>
+        <div class="container">
+            <div class="row footer-menu-cn">
+                <div class="col-md-3 col-sm-12">
+                    <ul class="list-unstyled">
+                        <li><a href="">About Us</a></li>
+                        <li><a href="">Feedback</a></li>
+                        <li><a href="">Community</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <ul class="list-unstyled">
+                        <li><a href="">Trust, Safety & Security</a></li>
+                        <li><a href="">Help & Support</a></li>
+                        <li><a href="">Upwork Foundation</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <ul class="list-unstyled">
+                        <li><a href="">Terms of Service</a></li>
+                        <li><a href="">Privacy Policy</a></li>
+                        <li><a href="">Accessibility</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <ul class="list-unstyled">
+                        <li><a href="">Desktop App</a></li>
+                        <li><a href="">Cookie Policy</a></li>
+                        <li><a href="">Enterprise Solutions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row social-footer-cn pt-3">
+                <div class="col-md-6 col-sm-12">
+                    <div class="d-flex">
+                        <span class="text-light">Follow us</span>
+                        <ul class="list-unstyled d-flex ms-3">
+                            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href=""><i class="fab fa-linkedin-in"></i></a></li>
+                            <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                            <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                            <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="d-flex justify-content-end">
+                        <span class="text-light">Mobile app</span>
+                        <ul class="list-unstyled d-flex ms-3">
+                            <li><a href=""><i class="fab fa-apple"></i></a></li>
+                            <li><a href=""><i class="fab fa-google-play"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <p class="text-light text-center mt-4">© 2015 - 2021 Upwork® Global Inc.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- bootstrap.js and popper.js in one bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

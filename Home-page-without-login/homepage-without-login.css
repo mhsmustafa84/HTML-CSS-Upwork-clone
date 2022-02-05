@@ -1,0 +1,434 @@
+/* start Global */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* --------end Global----------- */
+
+
+/* start navbar style */
+.nav-active-link-cn {
+    color: #37a000;
+}
+
+.search-input-cn {
+    height: 38px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px solid #e0e0e0;
+    border-left: 0;
+}
+
+.search-input-cn:focus {
+    box-shadow: unset;
+}
+
+.search-btn-cn {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 1px solid #e0e0e0;
+    border-right: 0;
+    left: 70px;
+    height: 38px;
+}
+
+.search-type-cn {
+    background-color: transparent;
+    top: -2px;
+    left: 50px;
+    height: 38px;
+}
+
+.search-type-cn>a {
+    color: #37a000;
+}
+
+.search-btn-cn:focus {
+    box-shadow: unset;
+}
+
+.search-icon-cn {
+    font-size: 14px;
+    color: #37a000;
+}
+
+.form-control::placeholder {
+    color: #e0e0e0;
+}
+
+.form-control:focus {
+    border-color: #e0e0e0;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.navbar-dark .navbar-nav .nav-link.active,
+.navbar-dark .navbar-nav .show>.nav-link {
+    color: #37a000;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: #222 !important;
+    font-size: 15px;
+    font-weight: 400;
+    margin-right: 10px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #37a000 !important;
+}
+
+
+.acc-cn p {
+    font-size: 14px;
+    height: 5px;
+}
+
+#search-form-id {
+    width: 350px;
+
+}
+
+#search-form-id ul {
+    width: 290px;
+    left: -30px !important;
+}
+
+#search-type-projects-new {
+    font-size: 10px;
+    padding: 3px 8px;
+    background-color: #0073d2;
+    color: white;
+}
+
+.second-nav-cn {
+    background-color: #f9f9f9;
+}
+
+.second-nav-cn ul li a {
+    color: #222;
+    font-size: 14px;
+    margin-right: 22px;
+}
+
+.second-nav-cn ul li a:hover {
+    color: #37a000;
+}
+
+.login-btn-cn:hover {
+    color: #37a000;
+}
+
+.signup-btn-cn {
+    background-color: #37a000;
+    font-size: 13px;
+    color: white;
+}
+
+.signup-btn-cn:hover {
+    background-color: #008329;
+    color: white;
+}
+
+#find-talent-dd-id {
+    top: 53px;
+    width: 750px;
+}
+
+#find-talent-dd-id ul li a,
+#find-work-dd-id ul li a {
+    padding: 12px 0;
+    font-size: 13px;
+}
+
+#find-talent-dd-id ul li a:hover,
+#find-work-dd-id ul li a:hover,
+#why-work-dd-id li a:hover {
+    background-color: transparent;
+    color: #37a000;
+}
+
+#find-talent-dd-id a p {
+    font-size: 13px;
+    color: #222;
+}
+
+#find-talent-dd-id a p:last-child {
+    margin-top: -10px;
+}
+
+#find-talent-dd-id div a:hover p {
+    color: #37a000;
+}
+
+#find-talent-dd-id div a,
+#find-work-dd-id div a {
+    color: #222;
+}
+
+#find-talent-dd-id div a:hover,
+#find-work-dd-id div a:hover {
+    color: #37a000;
+}
+
+#find-work-dd-id {
+    top: 53px;
+    width: 530px
+}
+
+/* -----------end navbar style-------------- */
+
+
+
+/* start */
+.fs-h1-cn {
+    font-size: 65px;
+    line-height: 95px;
+    color: #1D4354;
+}
+
+.fs-p-cn {
+    color: #1D4354;
+}
+
+.fs-btns-cn button:first-child {
+    background-color: #37a000;
+    color: white;
+    box-shadow: none;
+}
+
+.fs-btns-cn button:last-child {
+    color: #37a000;
+    box-shadow: none;
+}
+
+.fs-btns-cn button:first-child:hover {
+    background-color: #008329;
+}
+
+.fs-abs-img-cn {
+    left: 40%;
+    top: 65%;
+    padding: 10px;
+    background-color: white;
+}
+
+/* ---------------end first section-------------------- */
+
+
+/* start second and third section */
+.scrol-d-icon-cn {
+    color: #37a000;
+}
+
+.ss-p-cn {
+    letter-spacing: 2.8px;
+    color: #656565;
+}
+
+.ss-h2-cn {
+    font-size: 60px;
+    line-height: 80px;
+    color: #1D4354;
+}
+
+.ss-p2-cn {
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.ss-box-cn:hover {
+    background-color: #6FDA44;
+}
+
+.ss-box-cn:hover h3,
+.ss-box-cn:hover p {
+    color: white;
+}
+
+.ss-box-cn h3 {
+    color: #1D4354;
+}
+
+.ss-box-cn p {
+    color: #656565;
+    margin-top: 25px;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.ss-box-cn div {
+    color: white;
+    background-color: #6FDA44;
+    right: 0;
+    bottom: 0;
+}
+
+.ss-box-cn:hover div {
+    color: #6FDA44;
+    background-color: white;
+}
+
+.ss-ul-a-cn {
+    font-size: 63px;
+    line-height: 90px;
+    color: #222;
+}
+
+.ss-ul-a-cn:hover {
+    color: #6FDA44;
+}
+
+.ss-span-a-cn {
+    opacity: .8;
+    color: #1D4354;
+    border: 1px solid #1D4354;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.ss-span-a-cn:hover {
+    opacity: 1;
+    color: white;
+    background-color: #1D4354;
+}
+
+/* ----------------end second and third section----------------- */
+
+
+
+/* start fourth section */
+.fth-div-cn {
+    font-size: 25px;
+    line-height: 45px;
+    color: #1D4354;
+}
+
+.fth-abs-img1-cn {
+    top: 0;
+    left: 15%;
+}
+
+.fth-abs-img2-cn {
+    bottom: 0;
+    right: 4%;
+    padding: 10px;
+    background-color: white;
+}
+
+
+
+/* ---------------end fourth section---------- */
+
+
+
+
+
+
+/* start footer style */
+footer {
+    background-color: #1d4354;
+    padding: 60px 0;
+}
+
+footer ul {
+    margin-left: 20%;
+}
+
+footer ul li a {
+    display: inline-block;
+    color: white;
+    font-size: 13px;
+    margin: 2px 0;
+}
+
+.social-footer-cn {
+    border-top: 1px solid #2b5468;
+    border-bottom: 1px solid #2b5468;
+}
+
+.footer-menu-cn ul li a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.social-footer-cn ul li {
+    margin: 0 5px;
+    background-color: #2b5468;
+    padding: 3px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.social-footer-cn ul li:hover {
+    background-color: #336278;
+}
+
+.social-footer-cn ul li a {
+    font-size: 16px;
+}
+
+.social-footer-cn ul li a:hover {
+    color: white;
+}
+
+/* ---------end footer-------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+@media (max-width: 767px) {
+    .social-footer-cn {
+        border: 0;
+    }
+
+    .social-footer-cn div.d-flex {
+        padding-top: 10px;
+        flex-direction: column;
+        border-top: 1px solid #2b5468;
+
+    }
+
+    .social-footer-cn div.d-flex.justify-content-end {
+        justify-content: start !important;
+        border-bottom: 1px solid #2b5468;
+
+    }
+
+    .social-footer-cn div.d-flex ul {
+        margin-left: -5px !important;
+        margin-top: 10px;
+    }
+}
